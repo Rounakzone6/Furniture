@@ -24,7 +24,7 @@ const NewsBlogs = () => {
         <div className="flex mt-4 flex-col relative md:flex-row gap-4 items-center justify-center">
           {blogs.map((blog, index) => (
             <div
-              className="border hover:scale-101 transition-all duration-300 border-gray-200 rounded-xl p-4  relative flex flex-col gap-2 shadow-md"
+              className="border cursor-pointer hover:scale-101 transition-all duration-300 border-gray-200 rounded-xl p-4  relative flex flex-col gap-2 shadow-md"
               key={index}
             >
               <div

@@ -8,18 +8,21 @@ import {
 import {
   faBars,
   faCartShopping,
+  faCross,
   faF,
   faHeart,
   faSearch,
   faUser,
+  faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <div className="bg-[#204a25]">
         <div className="md:max-w-[80%] px-3 mx-auto">
           <div className="flex flex-col md:flex-row gap-1 justify-between py-1">
@@ -117,10 +120,58 @@ const Navbar = () => {
           <li className="cursor-pointer">
             <FontAwesomeIcon icon={faUser} />
           </li>
-          <li className="md:hidden cursor-pointer">
+          <li
+            onClick={() => setVisible(!visible)}
+            className="md:hidden cursor-pointer"
+          >
             <FontAwesomeIcon icon={faBars} />
           </li>
         </ul>
+      </div>
+      <div
+        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+          visible ? "w-full" : "w-0"
+        }`}
+      >
+        <div className="flex flex-col text-gray-600">
+          <div
+            onClick={() => setVisible(false)}
+            className="flex items-center gap-4 p-3 cursor-pointer"
+          >
+            <div className="flex items-center justify-between w-full">
+            <p>Back</p>
+            <FontAwesomeIcon icon={faX} className="h-4 rotate-180" />
+            </div>
+          </div>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/shop"
+          >
+            Shop
+          </NavLink>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/about"
+          >
+            About
+          </NavLink>
+          <NavLink
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </div>
       </div>
     </div>
   );

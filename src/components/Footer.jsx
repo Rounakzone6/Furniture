@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="bg-[#224A26]">
       <div className="px-2 py-4 mx-auto md:max-w-[80%] flex flex-col md:flex-row justify-between items-center gap-2">
         <div className="flex flex-col gap-2 md:w-[40%]">
-          <div className="flex items-center gap-1">
+          <div className="cursor-pointer flex items-center gap-1">
             <FontAwesomeIcon
               icon={faF}
               className="py-2.5 px-3.5  bg-yellow-500 rounded-full"
@@ -147,12 +147,12 @@ const Footer = () => {
             All Rights Reserved.
           </p>
           <div className="flex gap-2">
-            <select>
+            <select className="cursor-pointer">
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>
             </select>
             <div className="w-px h-6 bg-gray-950" />
-            <select>
+            <select className="cursor-pointer">
               <option value="USD">USD</option>
               <option value="INR">INR</option>
             </select>

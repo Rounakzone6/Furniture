@@ -15,11 +15,12 @@ import lighting from "./lighting.jpg";
 import diningTable from "./diningTable.jpg";
 
 import chair from "./chair.png";
-import bulb from './bulb.png'
-import sofa7 from './sofa7.png'
-import sofa8 from './sofa8.png'
+import bulb from "./bulb.png";
+import sofa7 from "./sofa7.png";
+import sofa8 from "./sofa8.png";
 import gamingChair1 from "./gamingChair1.png";
 import gamingChair2 from "./gamingChair2.png";
+import group_profiles from "./group_profiles.png";
 
 import hero1 from "./hero1.avif";
 import wardrobe from "./wardrobe.avif";
@@ -38,10 +39,13 @@ import { titleize } from "i/lib/methods";
 
 export default {
   bedroom1,
+  group_profiles,
   bedroom2,
   profile,
   chair,
-  bulb,sofa7,sofa8,
+  bulb,
+  sofa7,
+  sofa8,
   chair2,
   hall,
   office,
@@ -63,6 +67,29 @@ export default {
   gamingChair2,
   gamingChair3,
 };
+
+export const hero = [
+  {
+    img: hero1,
+    title: "Living Room",
+    about: 2500
+  },
+  {
+    img: bedroom1,
+    title: "Bedroom Room",
+    about: 1500
+  },
+  {
+    img: desk1,
+    title: "Office",
+    about: 2000
+  },
+  {
+    img: diningTable,
+    title: "Kitchen Accesories",
+    about: 1500
+  },
+]
 
 export const clients = [
   {
@@ -337,15 +364,15 @@ export const cards = [
     img: gamingChair1,
     discount: 20,
     title: "Latest Gaming Chairs",
-    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   },
   {
     img: gamingChair2,
     discount: 15,
     title: "Gaming Desk Collection",
-    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   },
-]
+];
 
 export const todayDeals = [
   {
@@ -355,7 +382,8 @@ export const todayDeals = [
     rating: 5.0,
     name: "Desk",
     title: "Rcliner Desk",
-    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    about:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   },
   {
     img: desk2,
@@ -364,7 +392,8 @@ export const todayDeals = [
     rating: 4.9,
     name: "Desk",
     title: "Rcliner Desk",
-    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    about:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   },
   {
     img: gamingChair2,
@@ -373,6 +402,7 @@ export const todayDeals = [
     rating: 4.5,
     name: "Chair",
     title: "Rcliner Gaming Chair",
-    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    about:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   },
-]
+];

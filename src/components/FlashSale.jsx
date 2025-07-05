@@ -18,7 +18,7 @@ const FlashSale = () => {
               <CountdownTimer days={5} />
             </div>
             <button
-              className="py-2 mt-4 px-6 bg-[#224A26] rounded-full"
+              className="py-2 cursor-pointer mt-4 px-6 bg-[#224A26] text-white font-medium rounded-full"
               type="submit"
             >
               Shop Now <FontAwesomeIcon icon={faArrowRight} />
@@ -27,13 +27,13 @@ const FlashSale = () => {
         </div>
         <div className="flex gap-3">
           <div
-            className="md:h-[70vh] p-2 h-[20vh] hover:scale-101 transition-all duration-300 rounded-2xl shadow-md border-gray-200 border md:w-[20vw] w-[40vw] bg-cover bg-no-repeat"
+            className="md:h-[70vh] cursor-pointer p-2 h-[20vh] hover:scale-101 transition-all duration-300 rounded-2xl shadow-md border-gray-200 border md:w-[20vw] w-[40vw] bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${assets.kitchen})` }}
           >
             <div className="border-1 border-white w-full h-full rounded-xl" />
           </div>
           <div
-            className="md:h-[70vh] p-2 h-[20vh] rounded-2xl hover:scale-101 transition-all duration-300 shadow-md border-gray-200 border md:w-[20vw] w-[40vw] bg-cover bg-no-repeat"
+            className="md:h-[70vh] cursor-pointer p-2 h-[20vh] rounded-2xl hover:scale-101 transition-all duration-300 shadow-md border-gray-200 border md:w-[20vw] w-[40vw] bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${assets.nightstand})` }}
           >
             <div className="border-1 border-white w-full h-full rounded-xl" />

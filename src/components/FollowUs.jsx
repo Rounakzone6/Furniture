@@ -26,7 +26,7 @@ const FollowUs = () => {
             ].map((img, index) => (
               <li
                 key={index}
-                className="relative group md:w-60 md:h-48 w-40 h-28 flex-shrink-0 rounded-2xl overflow-hidden bg-cover bg-center"
+                className="relative cursor-pointer group md:w-60 md:h-48 w-40 h-28 flex-shrink-0 rounded-2xl overflow-hidden bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
                 {/* Overlay */}
