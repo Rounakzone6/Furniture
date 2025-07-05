@@ -2,8 +2,46 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
+const faqData = [
+  {
+    question: "What types of furniture do you offer?",
+    answer:
+      "We offer a wide range of furniture for every space in your home or office — including sofas, beds, dining tables, chairs, wardrobes, coffee tables, storage units, work desks, and more.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept all major payment methods including credit/debit cards, UPI, net banking, wallets, and EMI options.",
+  },
+  {
+    question: "Can I track my furniture delivery?",
+    answer:
+      "Yes, once your order is shipped, you'll receive a tracking link via email or SMS.",
+  },
+  {
+    question: "What is your return policy?",
+    answer:
+      "We offer a 7-day return window for eligible products with free pickup for damaged or incorrect items.",
+  },
+  {
+    question: "What materials are used in your furniture?",
+    answer:
+      "We use solid wood, engineered wood, metal, and premium fabrics/leatherette with full specifications listed on each product.",
+  },
+  {
+    question: "Are there any discounts or promotions available?",
+    answer:
+      "Yes! We offer seasonal discounts, combo offers, and special deals for newsletter subscribers.",
+  },
+];
+
 const Faqs = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visibleIndex, setVisibleIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setVisibleIndex(visibleIndex === index ? null : index);
+  };
+
   return (
     <div className="py-6">
       <div className="md:max-w-[80%] p-2 mx-auto flex flex-col justify-center items-center">
@@ -15,83 +53,25 @@ const Faqs = () => {
           Questions? <span className="text-[#224A26]">Look here.</span>
         </p>
         <ul className="md:w-[60%] flex flex-col gap-2">
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>What types of furniture do you offer?</p>
-              <p className="hidden">
-                We offer a wide range of furniture for every space in your home
-                or office — including sofas, beds, dining tables, chairs,
-                wardrobes, coffee tables, storage units, work desks, and more.
-                Our collection includes modern, classic, and custom designs to
-                suit your style.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>What payment methods do you accept?</p>
-              <p className="hidden">
-                We accept all major payment methods including credit/debit cards
-                (Visa, Mastercard, RuPay), UPI, net banking, and wallet
-                payments. We also offer easy EMI options on select purchases.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>Can I track my furniture delivery?</p>
-              <p className="hidden">
-                Yes, once your order is shipped, you’ll receive a tracking link
-                via email or SMS. You can use it to monitor the status and
-                estimated delivery time of your order in real-time.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>What is your return policy?</p>
-              <p className="hidden">
-                We offer a 7-day return window for eligible products. If the
-                item is damaged, defective, or doesn’t match your order, we’ll
-                arrange a free pickup and issue a full refund or replacement.
-                Please refer to our full return policy for more details.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>What materials are used in your furniture?</p>
-              <p className="hidden">
-                We use premium materials such as solid wood, engineered wood,
-                high-grade plywood, metal, and durable fabrics or leatherette.
-                Each product listing includes detailed material specifications
-                for transparency and assurance.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
-          <li className="flex p-3 rounded-xl border-gray-200 shadow-md border justify-between items-center">
-            <div className="flex flex-col gap-3">
-              <p>Are there any discounts or promotions available?</p>
-              <p className="hidden">
-                Yes! We regularly offer seasonal sales, combo deals, and
-                limited-time discounts. Be sure to check our homepage, sign up
-                for our newsletter, or follow us on social media to stay updated
-                on current promotions.
-              </p>
-            </div>
-            {!isVisible && <FontAwesomeIcon icon={faPlus} />}
-            {isVisible && <FontAwesomeIcon icon={faMinus} />}
-          </li>
+          {faqData.map((faq, index) => (
+            <li
+              key={index}
+              onClick={() => toggleFaq(index)}
+              className={`cursor-pointer transition-all duration-300 p-4 rounded-xl border border-gray-200 shadow-md flex flex-col gap-2 ${
+                visibleIndex === index ? "bg-[#224A26] text-white" : "bg-white"
+              }`}
+            >
+              <div className="flex justify-between items-center">
+                <p className="font-medium">{faq.question}</p>
+                <FontAwesomeIcon
+                  icon={visibleIndex === index ? faMinus : faPlus}
+                />
+              </div>
+              {visibleIndex === index && (
+                <p className="text-sm text-white">{faq.answer}</p>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
