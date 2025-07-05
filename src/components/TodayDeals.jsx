@@ -67,7 +67,7 @@ const TodayDeals = () => {
             {cards.map((item, index) => (
               <div
                 key={index}
-                className="border cursor-pointer relative p-2 rounded-2xl cursor-pointer hover:scale-105 transition-all duration-300 border-gray-300 bg-gray-100 overflow-hidden flex gap-2 md:h-80"
+                className="border cursor-pointer relative p-2 rounded-2xl hover:scale-105 transition-all duration-300 border-gray-300 bg-gray-100 overflow-hidden flex gap-2 md:h-80"
               >
                 <div className="flex flex-col relative w-[80%] md:w-[72%]">
                   <p className="text-sm md:text-lg text-red-900">
