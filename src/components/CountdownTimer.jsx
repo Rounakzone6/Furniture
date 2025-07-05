@@ -21,13 +21,23 @@ const CountdownTimer = ({ days = 5 }) => {
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setTimeLeft(calculateTimeLeft());
-  //     }, 1000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const updatedTime = calculateTimeLeft();
+      setTimeLeft(updatedTime);
 
-  //     return () => clearInterval(interval);
-  //   }, []);
+      if (
+        updatedTime.days === 0 &&
+        updatedTime.hours === 0 &&
+        updatedTime.minutes === 0 &&
+        updatedTime.seconds === 0
+      ) {
+        clearInterval(interval); // Stop the interval once countdown ends
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex gap-4 text-center justify-center text-sm  md:text-xl font-semibold">
