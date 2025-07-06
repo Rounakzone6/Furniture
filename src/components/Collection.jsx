@@ -7,22 +7,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import assets, { features } from "../assets";
+import Service from "./Service";
 
 const Collection = () => {
   return (
     <div className="py-6">
       <div className="md:max-w-[80%] p-2 mx-auto">
-        <div className="flex justify-around items-start md:text-center flex-col md:flex-row">
-          {features.map((item, index) => (
-            <div key={index} className="flex gap-4 justify-center items-center">
-              <FontAwesomeIcon icon={item.img} className="text-2xl" />
-              <div>
-                <p className="text-md">{item.title}</p>
-                <p className="text-xs">{item.about}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Service />
         <div className="flex flex-col mt-4 md:flex-row gap-4">
           <div
             className="p-4 h-70 md:h-125 rounded-2xl bg-gray-200 bg-no-repeat bg-center md:bg-bottom  bg-cover"
@@ -50,7 +41,9 @@ const Collection = () => {
                   <span className="text-yellow-500 font-medium">750+</span>{" "}
                   Items
                 </p>
-                <p className="text-3xl font-medium">Sofa</p>
+                <p className="text-3xl text-white md:text-black font-medium">
+                  Sofa
+                </p>
               </div>
               <p className="text-sm text-[#001b4d]">
                 Experience luxury and comfort with our plush sofas. From

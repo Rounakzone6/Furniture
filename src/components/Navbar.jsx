@@ -16,11 +16,14 @@ import {
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { socialMedia } from "../assets";
 
-const Navbar = () => {
+const Navbar = ({isLogin}) => {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="bg-gray-100">
       <div className="bg-[#204a25]">
@@ -39,36 +42,14 @@ const Navbar = () => {
               </span>
             </p>
             <ul className="flex gap-1">
-              <li>
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  className="py-1 px-1.5 text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  className="py-1 px-1 text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faPinterestP}
-                  className="py-1 px-1.5 text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="py-1 px-1.5 text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faYoutube}
-                  className="py-1 px-1 text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
-                />
-              </li>
+              {socialMedia.map((item, index) => (
+                <li
+                  key={index}
+                  className="py-0.5 px-1.5 text-black text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
+                >
+                  <FontAwesomeIcon icon={item} />
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -139,8 +120,8 @@ const Navbar = () => {
             className="flex items-center gap-4 p-3 cursor-pointer"
           >
             <div className="flex items-center justify-between w-full">
-            <p>Back</p>
-            <FontAwesomeIcon icon={faX} className="h-4 rotate-180" />
+              <p>Back</p>
+              <FontAwesomeIcon icon={faX} className="h-4 rotate-180" />
             </div>
           </div>
           <NavLink

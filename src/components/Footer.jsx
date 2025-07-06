@@ -8,6 +8,7 @@ import {
 import { faF } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { socialMedia } from "../assets";
 
 const Footer = () => {
   return (
@@ -31,36 +32,14 @@ const Footer = () => {
             with craftsmanship you can feel and style you’ll love.
           </p>
           <ul className="flex gap-1.5">
-            <li>
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="p-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-300"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="p-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-300"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faPinterestP}
-                className="p-1 px-1.5 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-300"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="p-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-300"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="p-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-300"
-              />
-            </li>
+            {socialMedia.map((item, index) => (
+              <li
+                key={index}
+                className="py-1 px-2 text-black text-xs md:text-sm cursor-pointer hover:bg-yellow-600 rounded-full bg-yellow-500"
+              >
+                <FontAwesomeIcon icon={item} />
+              </li>
+            ))}
           </ul>
         </div>
         <div className="flex text-gray-300 text-xs md:text-sm gap-3 md:gap-4">

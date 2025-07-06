@@ -37,7 +37,7 @@ const Hero = () => {
             blanditiis ut dolores repellat! Quia repellendus dolorem voluptatem
             numquam nesciunt ipsam.
           </p>
-          <div className="flex gap-6 my-4 items-center justify-between w-full pr-4">
+          <div className="flex gap-6 my-4 items-end justify-between w-full pr-4">
             <button className="text-white cursor-pointer px-3 mt-4 py-1 w-30 bg-[#224A26] rounded-full">
               Shop Now <FontAwesomeIcon icon={faArrowRight} />
             </button>
@@ -45,10 +45,10 @@ const Hero = () => {
               View All Products
             </p>
           </div>
-          <div className="flex gap-2">
-            <img src={assets.group_profiles} alt="Groups" className="h-10" />
+          <div className="flex gap-2 items-center">
+            <img src={assets.group_profiles} alt="Groups" className="h-6 md:h-10" />
             <div>
-              <p className="font-medium">4.9 Ratings+</p>
+              <p className="font-medium text-xs md:text-sm">4.9 Ratings+</p>
               <p className="text-xs text-gray-600">Trusted by 50k+ Customers</p>
             </div>
           </div>

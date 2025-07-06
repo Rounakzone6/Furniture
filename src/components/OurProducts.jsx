@@ -36,7 +36,7 @@ const OurProducts = () => {
                 setBestSeller(false);
                 setFeaturedProduct(false);
               }}
-              className={`text-sm px-4 py-2 border cursor-pointer border-gray-200 shadow-md rounded-full transition-all duration-300 ${
+              className={`text-xs md:text-sm px-4 py-2 border cursor-pointer border-gray-200 shadow-md rounded-full transition-all duration-300 ${
                 allProducts
                   ? "bg-[#224A26] text-white scale-105"
                   : "hover:bg-[#224A26] hover:text-white"

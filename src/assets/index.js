@@ -10,9 +10,17 @@ import sofa4 from "./sofa4.jpg";
 import sofa5 from "./sofa5.jpg";
 import sofa6 from "./sofa6.jpg";
 import profile from "./profile.jpg";
+import profile1 from "./01.jpg";
+import profile2 from "./03.jpg";
 import kitchen from "./kitchen.jpg";
 import lighting from "./lighting.jpg";
 import diningTable from "./diningTable.jpg";
+
+import kitchen1 from "./kitchen1.jpeg";
+import kitchen2 from "./kitchen2.jpeg";
+import kitchen3 from "./kitchen3.jpeg";
+import kitchen4 from "./kitchen4.jpeg";
+import kitchen5 from "./kitchen5.jpeg";
 
 import chair from "./chair.png";
 import bulb from "./bulb.png";
@@ -36,13 +44,27 @@ import {
   faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
 import { titleize } from "i/lib/methods";
+import {
+  faFacebookF,
+  faInstagram,
+  faPinterestP,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default {
   bedroom1,
   group_profiles,
   bedroom2,
   profile,
+  profile1,
+  profile2,
   chair,
+  kitchen1,
+  kitchen2,
+  kitchen3,
+  kitchen4,
+  kitchen5,
   bulb,
   sofa7,
   sofa8,
@@ -68,28 +90,77 @@ export default {
   gamingChair3,
 };
 
+export const team = [
+  {
+    img: profile,
+    name: "Rounak Gupta",
+    role: "CEO, Furniture.",
+  },
+  {
+    img: profile1,
+    name: "Rounak Gupta",
+    role: "Software Engineer",
+  },
+  {
+    img: profile2,
+    name: "Rounak Gupta",
+    role: "Carpenter",
+  },
+];
+
+export const login = [
+  {
+    img: kitchen,
+    name: "Rounak Gupta",
+    role: "Architecture",
+    about:
+      "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
+  },
+  {
+    img: kitchen5,
+    name: "Rounak Gupta",
+    role: "Architecture",
+    about:
+      "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
+  },
+  {
+    img: kitchen3,
+    name: "Rounak Gupta",
+    role: "Architecture",
+    about:
+      "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
+  },
+  {
+    img: kitchen4,
+    name: "Rounak Gupta",
+    role: "Architecture",
+    about:
+      "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
+  },
+];
+
 export const hero = [
   {
     img: hero1,
     title: "Living Room",
-    about: 2500
+    about: 2500,
   },
   {
     img: bedroom1,
     title: "Bedroom Room",
-    about: 1500
+    about: 1500,
   },
   {
     img: desk1,
     title: "Office",
-    about: 2000
+    about: 2000,
   },
   {
     img: diningTable,
     title: "Kitchen Accesories",
-    about: 1500
+    about: 1500,
   },
-]
+];
 
 export const clients = [
   {
@@ -240,6 +311,14 @@ export const allProduct = [
     offerPrice: 72,
     price: 80,
   },
+];
+
+export const socialMedia = [
+  faFacebookF,
+  faTwitter,
+  faPinterestP,
+  faInstagram,
+  faYoutube,
 ];
 
 export const latestProducts = [
