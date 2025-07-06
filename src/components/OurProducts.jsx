@@ -97,7 +97,7 @@ const OurProducts = () => {
               (latestProduct && latestProducts) ||
               (bestSeller && bestSellers) ||
               (featuredProduct && featuredProducts)
-            ).map((item, index) => (
+            ).slice(0, 4).map((item, index) => (
               <div
                 key={index}
                 className="border flex flex-col justify-center rounded-2xl p-2 h-[45vh] md:h-[60vh] md:w-[17vw] w-[45vw] hover:scale-101 transition-all duration-300 cursor-pointer"
@@ -114,7 +114,7 @@ const OurProducts = () => {
                     />
                   </button>
                   <FontAwesomeIcon
-                    icon={fasHeart} 
+                    icon={fasHeart}
                     className="text-xl absolute right-3 bottom-2 text-red-500"
                   />
                 </div>

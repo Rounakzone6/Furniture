@@ -20,9 +20,20 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { socialMedia } from "../assets";
 
-const Navbar = ({isLogin}) => {
+const Navbar = () => {
+  
   const [visible, setVisible] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
+
+  function handleLogin(){
+    if(isLogin){
+      navigate('/my-account')
+    }
+    else{
+      navigate('/login')
+    }
+  }
 
   return (
     <div className="bg-gray-100">
@@ -99,7 +110,7 @@ const Navbar = ({isLogin}) => {
             <FontAwesomeIcon icon={faCartShopping} />
           </li>
           <li className="cursor-pointer">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} onClick={handleLogin} />
           </li>
           <li
             onClick={() => setVisible(!visible)}

@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
           <div>
             <p className="text-white text-[15px] md:text-lg font-medium mb-2">
-              Curstomer Services
+              Curstomer Service
             </p>
             <ul className="flex flex-col gap-2">
               <li className="hover:underline hover:text-gray-200 cursor-pointer">

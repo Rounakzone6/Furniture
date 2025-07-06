@@ -6,7 +6,7 @@ import { faF } from "@fortawesome/free-solid-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ setIsLogin }) => {
+const Login = () => {
   const [haveAccount, sethaveAccount] = useState(true);
 
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ const Login = ({ setIsLogin }) => {
                     type="text"
                     name="firstName"
                     placeholder="First Name"
-                    className="px-2 w-39 md:w-55 py-2 border rounded-full "
+                    className="px-2 w-39 md:w-56 py-2 border rounded-full "
                   />
                 </div>
                 <div>
@@ -64,7 +64,7 @@ const Login = ({ setIsLogin }) => {
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
-                    className="px-2 w-39 md:w-55 py-2 border rounded-full"
+                    className="px-2 w-39 md:w-57 py-2 border rounded-full"
                   />
                 </div>
               </div>
