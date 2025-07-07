@@ -24,7 +24,7 @@ import CategoriesHover from "./CategoriesHover";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [showShopDropdown, setShowShopDropdown] = useState(false);
   const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
 
