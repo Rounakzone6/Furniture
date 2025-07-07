@@ -9,13 +9,18 @@ import { faF } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { socialMedia } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#224A26]">
       <div className="px-2 py-4 mx-auto md:max-w-[80%] flex flex-col md:flex-row justify-between items-center gap-2">
         <div className="flex flex-col gap-2 md:w-[40%]">
-          <div className="cursor-pointer flex items-center gap-1">
+          <div
+            onClick={() => navigate("/")}
+            className="cursor-pointer flex items-center gap-1"
+          >
             <FontAwesomeIcon
               icon={faF}
               className="py-2.5 px-3.5  bg-yellow-500 rounded-full"
@@ -48,16 +53,28 @@ const Footer = () => {
               Company
             </p>
             <ul className="flex flex-col gap-2">
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/about")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 About us
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/blogs")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Blog
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/contact")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Contact Us
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/careers")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Career
               </li>
             </ul>
@@ -67,17 +84,29 @@ const Footer = () => {
               Curstomer Service
             </p>
             <ul className="flex flex-col gap-2">
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/my-account")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 My Account
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer text-xs md:text-sm">
+              <li
+                onClick={() => navigate("/track-order")}
+                className="hover:underline hover:text-gray-200 cursor-pointer text-xs md:text-sm"
+              >
                 Track Your Order
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/return-policy")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Return
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
-                FAQ
+              <li
+                onClick={() => navigate("/faqs")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
+                FAQs
               </li>
             </ul>
           </div>
@@ -86,13 +115,22 @@ const Footer = () => {
               Our Information
             </p>
             <ul className="flex flex-col gap-2">
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/privacy")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Privacy
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer text-xs md:text-sm">
+              <li
+                onClick={() => navigate("/terms")}
+                className="hover:underline hover:text-gray-200 cursor-pointer text-xs md:text-sm"
+              >
                 User Terms & Conditions
               </li>
-              <li className="hover:underline hover:text-gray-200 cursor-pointer">
+              <li
+                onClick={() => navigate("/return-policy")}
+                className="hover:underline hover:text-gray-200 cursor-pointer"
+              >
                 Return Policy
               </li>
             </ul>

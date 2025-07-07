@@ -34,11 +34,10 @@ const MyAccount = () => {
 
   return (
     <>
-      <Path path1="My Account" path2="Home" />
-      <div className="md:max-w-[80%]  p-2 mx-auto">
+      <Path path1="My Account" path2="Home" path3="My Account" />
+      <div className="md:max-w-[80%] p-2 mx-auto">
         <div className="flex gap-4">
-          <div className="">
-            <ul className="space-y-2">
+            <ul className="space-y-2 w-30 md:w-[30%]">
               {[
                 "Personal Information",
                 "My Orders",
@@ -58,7 +57,6 @@ const MyAccount = () => {
                 </li>
               ))}
             </ul>
-          </div>
           <div className="mt-4">{renderComponent()}</div>
         </div>
         <Service />

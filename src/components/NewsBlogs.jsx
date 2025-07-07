@@ -14,7 +14,7 @@ const NewsBlogs = () => {
             Our Latest <br />
             <span className="text-[#224A26]">News & Blogs</span>
           </p>
-          <button
+          <button onClick={()=>navigate('/blogs')}
             className="px-4 md:px-6 py-2 bg-[#224A26] rounded-full text-white"
             type="submit"
           >

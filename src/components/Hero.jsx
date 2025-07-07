@@ -7,8 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import assets, { hero } from "../assets";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate()
   const settings = {
     infinite: true,
     dots: true,
@@ -38,10 +40,10 @@ const Hero = () => {
             numquam nesciunt ipsam.
           </p>
           <div className="flex gap-6 my-4 items-end justify-between w-full pr-4">
-            <button className="text-white cursor-pointer px-3 mt-4 py-1 w-30 bg-[#224A26] rounded-full">
+            <button onClick={()=>navigate('/shop')} className="text-white cursor-pointer px-3 mt-4 py-1 w-30 bg-[#224A26] rounded-full">
               Shop Now <FontAwesomeIcon icon={faArrowRight} />
             </button>
-            <p className="text-[#224A26] cursor-pointer font-medium underline">
+            <p onClick={()=>navigate('/shop')} className="text-[#224A26] cursor-pointer font-medium underline">
               View All Products
             </p>
           </div>

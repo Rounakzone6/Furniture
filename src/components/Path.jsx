@@ -2,8 +2,8 @@ import React from "react";
 
 const Path = ({ path1, path2, path3 }) => {
   return (
-    <div className="bg-gray-200 py-4">
-      <div className="md:max-w-[80%] p-2 mx-auto text-center">
+    <div className="bg-gray-200 md:py-4">
+      <div className="md:max-w-[80%] py-2 mx-auto text-center">
         <p className="md:text-2xl text-lg font-medium">{path1}</p>
         <div className="text-md md:text-lg">
           <p>

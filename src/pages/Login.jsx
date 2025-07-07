@@ -4,12 +4,12 @@ import { login } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faF } from "@fortawesome/free-solid-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { useNavigate } from "react-router-dom";
+import Path from "../components/Path";
+import Service from "../components/Service";
 
 const Login = () => {
   const [haveAccount, sethaveAccount] = useState(true);
 
-  const navigate = useNavigate();
   const settings = {
     infinite: true,
     speed: 500,
@@ -20,8 +20,9 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gray-200 px-2 py-6">
-      <div className="md:max-w-[80%] flex-wrap md:flex-nowrap gap-4 mx-auto flex">
+    <div className="bg-gray-100 px-2">
+      <Path path1="LogIn" path2="Home" path3="Sign In" />
+      <div className="md:max-w-[80%] my-6 flex-wrap md:flex-nowrap gap-4 mx-auto flex">
         <div className="flex mx-auto bg-white flex-col md:w-[50%] border border-gray-200 shadow-md p-4 rounded-2xl">
           <div className="flex gap-1 items-center justify-center mb-2">
             <FontAwesomeIcon
@@ -160,6 +161,9 @@ const Login = () => {
             </div>
           ))}
         </Slider>
+      </div>
+      <div className="max-w-[80%] mx-auto px-2">
+      <Service />
       </div>
     </div>
   );

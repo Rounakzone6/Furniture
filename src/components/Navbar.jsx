@@ -8,7 +8,6 @@ import {
 import {
   faBars,
   faCartShopping,
-  faCross,
   faF,
   faHeart,
   faSearch,
@@ -19,19 +18,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { socialMedia } from "../assets";
+import NewsLetter from "./NewsLetter";
+import FurnitureHover from "./FurnitureHover";
+import CategoriesHover from "./CategoriesHover";
 
 const Navbar = () => {
-  
   const [visible, setVisible] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const navigate = useNavigate();
+  const [showShopDropdown, setShowShopDropdown] = useState(false);
+  const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
 
-  function handleLogin(){
-    if(isLogin){
-      navigate('/my-account')
-    }
-    else{
-      navigate('/login')
+  const navigate = useNavigate();
+  const [showNewsletter, setShowNewsletter] = useState(false);
+
+  function handleLogin() {
+    if (isLogin) {
+      navigate("/my-account");
+    } else {
+      navigate("/login");
     }
   }
 
@@ -39,7 +43,7 @@ const Navbar = () => {
     <div className="bg-gray-100">
       <div className="bg-[#204a25]">
         <div className="md:max-w-[80%] px-3 mx-auto">
-          <div className="flex flex-col md:flex-row gap-1 justify-between py-1">
+          <div className="flex relative flex-col md:flex-row gap-1 justify-between py-1">
             <p className="text-gray-100 text-xs md:text-sm">
               Call Us:{" "}
               <span className="hover:underline cursor-pointer">
@@ -48,9 +52,25 @@ const Navbar = () => {
             </p>
             <p className="text-gray-200 text-xs md:text-sm">
               Sign up and GET 25% OFF for your first order.{" "}
-              <span className="underline text-yellow-500 hover:text-yellow-600 cursor-pointer">
+              <span
+                onClick={() => setShowNewsletter(true)}
+                className="underline text-yellow-500 hover:text-yellow-600 cursor-pointer"
+              >
                 Sign up now
               </span>
+              {showNewsletter && (
+                <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+                  <div className="relative">
+                    <button
+                      className="absolute top-2 right-2 text-black bg-amber-500 rounded-full py-1 px-2.5 font-bold text-xl"
+                      onClick={() => setShowNewsletter(false)}
+                    >
+                      ✕
+                    </button>
+                    <NewsLetter />
+                  </div>
+                </div>
+              )}
             </p>
             <ul className="flex gap-1">
               {socialMedia.map((item, index) => (
@@ -78,14 +98,36 @@ const Navbar = () => {
             <p>Home</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </NavLink>
-          <NavLink to="/shop">
-            <p>Shop</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-          </NavLink>
-          <NavLink to="/categories">
-            <p>Categories</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-          </NavLink>
+          <div
+            className="relative"
+            onMouseEnter={() => setShowShopDropdown(true)}
+            onMouseLeave={() => setShowShopDropdown(false)}
+          >
+            <NavLink to="/shop">
+              <p>Shop</p>
+            </NavLink>
+            {showShopDropdown && (
+              <div className="absolute top-full left-[-20vw] z-10">
+                <FurnitureHover />
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShowCategoriesDropdown(true)}
+            onMouseLeave={() => setShowCategoriesDropdown(false)}
+          >
+            <NavLink to="/categories">
+              <p>Categories</p>
+            </NavLink>
+            {showCategoriesDropdown && (
+              <div className="absolute top-full left-[-15vw] z-10">
+                <CategoriesHover />
+              </div>
+            )}
+          </div>
+
           <NavLink to="/about">
             <p>About Us</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />

@@ -43,7 +43,6 @@ import {
   faCreditCard,
   faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
-import { titleize } from "i/lib/methods";
 import {
   faFacebookF,
   faInstagram,
@@ -89,6 +88,14 @@ export default {
   gamingChair2,
   gamingChair3,
 };
+
+export const home = ["Bedroom","Living room","Dining room","Bathroom","Children's room","Home Office","Lighting"];
+export const offices = ["Desks","Office Chairs","Bookcases","Office Storage","Cubicles","Filing Cabinets","Sofa"];
+export const outdoor = ["Patio Sets","Outdoor Sofas","Dingin Sofas","Lounge Chairs","Outdoor Tables","Hammocks","Umbrellas"];
+export const chairs = ["Gaming Chair","Office Chair","Armchair","Club Chair","Folding Chair","Dining Chair","Bar Stool"];
+export const sofas = ["Reception Sofa","Sectional Sofa","Armless Sofa","Curved Sofa","Lounge Sofa","Mid-century","Rolled Arm"];
+export const lightings = ["Table Lights","Floor Lights","Ceiling Lights","Wall Lights","Overhead Lighting","Task Lighting","Architectural Lighting"];
+export const tables = ["Dining Tables","Coffee Tables","Side Tables","Console Tables","Desks","Outdoor Tables"];
 
 export const team = [
   {
@@ -162,79 +169,6 @@ export const hero = [
   },
 ];
 
-export const clients = [
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-  {
-    img: profile,
-    name: "Rounak Gupta",
-    role: "UX/UI Designer",
-    rating: 5,
-    text: "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can use it to monitor the status and estimated delivery time of your order in real-time.",
-  },
-];
-
 export const features = [
   {
     img: faTruckFast,
@@ -274,292 +208,169 @@ export const blogs = [
   },
 ];
 
-export const allProduct = [
+export const categories = [
   {
-    _id: "01",
-    offer: 50,
-    img: chair2,
-    name: "Chair",
-    category: "Bedroom",
-    color: "Red",
-    material: "Wood",
-    rating: "4.9",
-    title: "Wooden Sofa Chair",
-    offerPrice: 80,
-    price: 160,
-    availability: "In Stock",
+    slug: "bedroom",
+    title: "Bedroom",
+    img: bedroom1,
   },
   {
-    _id: "02",
-    category: "Office",
-    color: "Green",
-    material: "Wood",
-    offer: 10,
-    img: gamingChair1,
-    name: "Chair",
-    rating: "5.0",
-    title: "Gaming Chair",
-    offerPrice: 108,
-    price: 120,
-    availability: "In Stock",
+    slug: "office",
+    title: "Office",
+    img: desk1,
   },
   {
-    _id: "03",
-    category: "Sofa",
-    subCategory: "Nightstand",
-    color: "Brown",
-    material: "Metal",
-    offer: 10,
-    img: nightstand,
-    name: "Nightstand",
-    rating: "4.6",
-    title: "Wooden Nightstand",
-    offerPrice: 54,
-    price: 60,
-    availability: "Out of Stock",
+    slug: "kitchen",
+    title: "Kitchen",
+    img: kitchen1,
   },
   {
-    _id: "04",
-    category: "Chair",
-    subCategory: "GamingChair",
-    color: "Gray",
-    material: "Glass",
-    offer: 10,
-    img: gamingChair3,
-    name: "Chair",
-    rating: "4.5",
-    title: "Gaming Chair",
-    offerPrice: 72,
-    price: 80,
-    availability: "In Stock",
+    slug: "Living Area",
+    title: "Living Area",
+    img: sofa5,
   },
   {
-    _id: "05",
-    offer: 20,
-    img: chair2,
-    name: "Armchair",
-    category: "Living Room",
-    color: "Blue",
-    material: "Leather",
-    rating: "4.8",
-    title: "Luxury Armchair",
-    offerPrice: 200,
-    price: 250,
-    availability: "In Stock",
+    slug: "Dining",
+    title: "Dining Hall",
+    img: diningTable,
   },
   {
-    _id: "06",
-    offer: 15,
-    img: gamingChair1,
-    name: "Ergo Chair",
-    category: "Office",
-    color: "Black",
-    material: "Mesh",
-    rating: "4.7",
-    title: "Ergonomic Chair",
-    offerPrice: 170,
-    price: 200,
-    availability: "Out of Stock",
+    slug: "Wardrobe",
+    title: "Wardrobe",
+    img: wardrobe,
   },
-  {
-    _id: "07",
-    offer: 30,
-    img: nightstand,
-    name: "Drawer Table",
-    category: "Bedroom",
-    color: "White",
-    material: "Wood",
-    rating: "4.4",
-    title: "2-Drawer Nightstand",
-    offerPrice: 105,
-    price: 150,
-    availability: "In Stock",
-  },
-  {
-    _id: "08",
-    offer: 25,
-    img: gamingChair3,
-    name: "Rocking Chair",
-    category: "Living Room",
-    color: "Cream",
-    material: "Wood",
-    rating: "4.3",
-    title: "Classic Rocking Chair",
-    offerPrice: 90,
-    price: 120,
-    availability: "Out of Stock",
-  },
-  {
-    _id: "09",
-    offer: 40,
-    img: chair2,
-    name: "Lounge Chair",
-    category: "Lounge",
-    color: "Gray",
-    material: "Fabric",
-    rating: "4.6",
-    title: "Recliner Lounge Chair",
-    offerPrice: 150,
-    price: 250,
-    availability: "In Stock",
-  },
-  {
-    _id: "10",
-    offer: 10,
-    img: gamingChair1,
-    name: "Desk Chair",
-    category: "Office",
-    color: "Red",
-    material: "Plastic",
-    rating: "4.2",
-    title: "Compact Desk Chair",
-    offerPrice: 90,
-    price: 100,
-    availability: "Out of Stock",
-  },
-  {
-    _id: "11",
-    offer: 35,
-    img: nightstand,
-    name: "Side Table",
-    category: "Living Room",
-    color: "Teak",
-    material: "Wood",
-    rating: "4.7",
-    title: "Round Side Table",
-    offerPrice: 65,
-    price: 100,
-    availability: "In Stock",
-  },
-  {
-    _id: "12",
-    offer: 20,
-    img: gamingChair3,
-    name: "Chair",
-    category: "Dining",
-    color: "Brown",
-    material: "Wood",
-    rating: "4.5",
-    title: "Dining Chair Set",
-    offerPrice: 160,
-    price: 200,
-    availability: "Out of Stock",
-  },
-  {
-    _id: "13",
-    offer: 15,
-    img: chair2,
-    name: "Chair",
-    category: "Balcony",
-    color: "Green",
-    material: "Plastic",
-    rating: "4.1",
-    title: "Outdoor Chair",
-    offerPrice: 85,
-    price: 100,
-    availability: "In Stock",
-  },
-  {
-    _id: "14",
-    offer: 10,
-    img: gamingChair1,
-    name: "Chair",
-    category: "Study",
-    color: "Black",
-    material: "Metal",
-    rating: "4.3",
-    title: "Study Chair",
-    offerPrice: 135,
-    price: 150,
-    availability: "In Stock",
-  },
-  {
-    _id: "15",
-    offer: 50,
-    img: nightstand,
-    name: "Mini Table",
-    category: "Kids",
-    color: "Pink",
-    material: "Plastic",
-    rating: "4.9",
-    title: "Kids Study Table",
-    offerPrice: 60,
-    price: 120,
-    availability: "Out of Stock",
-  },
-  {
-    _id: "16",
-    offer: 25,
-    img: gamingChair3,
-    name: "Chair",
-    category: "Office",
-    color: "Yellow",
-    material: "Fabric",
-    rating: "4.6",
-    title: "Soft Office Chair",
-    offerPrice: 112,
-    price: 150,
-    availability: "In Stock",
-  },
-  {
-    _id: "17",
-    offer: 45,
-    img: chair2,
-    name: "Sofa Chair",
-    category: "Living Room",
-    color: "Purple",
-    material: "Velvet",
-    rating: "4.8",
-    title: "Velvet Sofa Chair",
-    offerPrice: 99,
-    price: 180,
-    availability: "In Stock",
-  },
-  {
-    _id: "18",
-    offer: 20,
-    img: gamingChair1,
-    name: "Executive Chair",
-    category: "Office",
-    color: "Blue",
-    material: "Leather",
-    rating: "5.0",
-    title: "Executive Office Chair",
-    offerPrice: 160,
-    price: 200,
-    availability: "Out of Stock",
-  },
-  {
-    _id: "19",
-    offer: 30,
-    img: nightstand,
-    name: "End Table",
-    category: "Bedroom",
-    color: "Dark Brown",
-    material: "Wood",
-    rating: "4.4",
-    title: "Compact End Table",
-    offerPrice: 70,
-    price: 100,
-    availability: "In Stock",
-  },
-  {
-    _id: "20",
-    offer: 15,
-    img: gamingChair3,
-    name: "Swivel Chair",
-    category: "Gaming",
-    color: "Black",
-    material: "Mesh",
-    rating: "4.5",
-    title: "360 Swivel Chair",
-    offerPrice: 110,
-    price: 130,
-    availability: "In Stock",
-  }
 ];
 
 
+export const allProduct = Array.from({ length: 46 }, (_, i) => {
+  const id = String(i + 1).padStart(2, "0");
+
+  const names = ["Chair", "Sofa", "Table", "Stool", "Desk", "wardrobe"];
+  const categories = [
+    "Bedroom",
+    "Living Room",
+    "Office",
+    "Lighing",
+    "Kitchen",
+    "Outdoor",
+    "Decor",
+    "Gaming",
+    "Study",
+  ];
+  const colors = [
+    "Brown",
+    "Gray",
+    "Black",
+    "Green",
+    "Red",
+    "Orange",
+    "Blue",
+    "White",
+  ];
+  const materials = [
+    "Wood",
+    "Metal",
+    "Uphoistered",
+    "Glass",
+    "Fabric",
+    "Leather",
+    "Plastic",
+  ];
+  const availability = ["In Stock", "Out of Stock"];
+  const imgs = [
+    bedroom2,
+    chair,
+    kitchen1,
+    kitchen2,
+    kitchen3,
+    kitchen4,
+    kitchen5,
+    bulb,
+    sofa7,
+    sofa8,
+    chair2,
+    hall,
+    office,
+    sofa1,
+    sofa2,
+    sofa3,
+    sofa4,
+    sofa5,
+    sofa6,
+    kitchen,
+    lighting,
+    hero1,
+    wardrobe,
+    nightstand,
+    diningTable,
+    desk1,
+    desk2,
+    gamingChair1,
+    gamingChair2,
+    gamingChair3,
+  ];
+
+  const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  const price = Math.floor(Math.random() * 200) + 50;
+  const offer = [10, 15, 20, 25, 30, 40, 50][Math.floor(Math.random() * 7)];
+  const offerPrice = Math.floor(price - (price * offer) / 100);
+
+  return {
+    _id: id,
+    offer,
+    img: random(imgs),
+    name: random(names),
+    category: random(categories),
+    color: random(colors),
+    material: random(materials),
+    rating: (Math.random() * (5 - 4) + 4).toFixed(1),
+    title: `${random(materials)} ${random(names)}`,
+    offerPrice,
+    price,
+    availability: random(availability),
+  };
+});
+
+export const clients = Array.from({ length: 8 }, (_, i) => {
+  const id = String(i + 1).padStart(2, "0");
+
+  const names = [
+    "Rounak Gupta",
+    "Sahil Barnwal",
+    "Rahul Yadav",
+    "Shiva Singh",
+    "Nitish Gupta",
+    "Aman Yadav",
+  ];
+
+  const roles = [
+    "Software Engineer",
+    "UX/UI Designer",
+    "Backend Developer",
+    "Architecture",
+    "Frontend Developer",
+  ];
+
+  const ratings = [5.0, 4.8, 4.5, 4.0];
+
+  const imgs = [profile, profile1, profile2];
+
+  const texts = [
+    "Yes, once your order is shipped, you’ll receive a tracking link via email or SMS. You can monitor the status and estimated delivery time of your order in real‑time.",
+  ];
+
+  const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  return {
+    _id: id,
+    img: random(imgs),
+    name: random(names),
+    role: random(roles),
+    rating: random(ratings),
+    text: random(texts),
+  };
+});
 
 export const socialMedia = [
   faFacebookF,
